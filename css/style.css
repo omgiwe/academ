@@ -1,3 +1,15 @@
+.menu-rigth__btn, .menu-left__btn {
+  border: none;
+  background-color: #FF3E79;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -9,6 +21,7 @@ html {
 body {
   min-width: 320px;
   overflow-x: hidden;
+  background-color: #F8F8F8;
 }
 
 .container {
@@ -16,11 +29,85 @@ body {
 }
 
 .header {
-  background-color: #706f6f;
+  background-color: #fff;
 }
 .header__inner {
   min-height: 88px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.menu-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.menu-left__logo {
+  position: relative;
+}
+.menu-left__logo::after {
+  content: "";
+  background: #EAEAEA;
+  width: 2px;
+  height: 32px;
+  position: absolute;
+  right: -16px;
+  top: 9px;
+}
+
+.menu-rigth {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.services {
+  padding: 24px 0;
+}
+.services__title {
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: 700;
+  margin: 0 0 24px;
+  position: relative;
+}
+.services__title::before {
+  content: "";
+  background: #41F6D7;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  width: 4px;
+  height: 40px;
+  position: absolute;
+  left: -14px;
+}
+.services__menu-wrapper {
+  overflow: hidden;
+}
+.services__menu {
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  -webkit-mask-image: linear-gradient(to left, transparent, #000 10%);
+          mask-image: linear-gradient(to left, transparent, #000 10%);
+  padding-bottom: 20px;
+  margin-bottom: -20px;
+}
+.services__menu-items {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+}
+.services__menu-item {
+  padding: 9px 12px;
+}
+.services__menu-item--active {
+  background-color: #FFFFFF;
+  border: 2px solid #B8FFEC;
+  border-radius: 6px;
+}
+.services__menu-link {
+  color: #7E7E82;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
 }/*# sourceMappingURL=style.css.map */
