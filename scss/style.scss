@@ -38,29 +38,47 @@ body{
     display: flex;
     align-items: center;
     gap: 16px;
+    &__btn-burger{
+        @extend %btn-style
+    }
+    // &__logo{
+    //      position: relative;
+    // }
+    // &__logo::after{
+    //     content: "";
+    //     background: #EAEAEA;
+    //     width: 2px;
+    //     height: 32px;
+    //     position: absolute;
+    //     right: -16px;
+    //     top: 12px;
+    // }
+}
+
+.menu-rigth{
+
+    &__contacts{
+
+    }
+    &__application{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        }
     &__btn{
         @extend %btn-style
     }
-    &__logo{
+    &__btn:first-child{
         position: relative;
     }
-    &__logo::after{
+    &__btn:first-child::before{
         content: "";
         background: #EAEAEA;
         width: 2px;
         height: 32px;
         position: absolute;
-        right: -16px;
-        top: 9px;
-    }
-}
-
-.menu-rigth{
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    &__btn{
-        @extend %btn-style
+        right:60px;
+        top: 5px;
     }
 }
 

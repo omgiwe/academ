@@ -16,7 +16,7 @@
   font-style: normal;
   src: url("../fonts/TTLakes-Bold.woff2") format("woff2"), url("../fonts/TTLakes-Bold.woff") format("woff");
 }
-.menu-rigth__btn, .menu-left__btn {
+.menu-rigth__btn, .menu-left__btn-burger {
   border: none;
   background-color: #FF3E79;
   width: 40px;
@@ -65,24 +65,24 @@ body {
   align-items: center;
   gap: 16px;
 }
-.menu-left__logo {
+.menu-rigth__application {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.menu-rigth__btn:first-child {
   position: relative;
 }
-.menu-left__logo::after {
+.menu-rigth__btn:first-child::before {
   content: "";
   background: #EAEAEA;
   width: 2px;
   height: 32px;
   position: absolute;
-  right: -16px;
-  top: 9px;
+  right: 60px;
+  top: 5px;
 }
 
-.menu-rigth {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
 .services {
   padding: 24px 0;
 }
