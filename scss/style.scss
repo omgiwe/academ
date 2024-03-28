@@ -13,6 +13,10 @@ body{
     min-width: 320px;
     overflow-x: hidden;
     background-color: #F8F8F8;
+    font-family: 'TTLakes-Regular', 'Arial', 'sans-serif' ;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
 }
 
 .container{
@@ -63,6 +67,7 @@ body{
 .services {
     padding: 24px 0;
     &__title{
+        font-family: 'TTLakes-Bold' ;
         font-size: 28px;
         line-height: 40px;
         font-weight: 700;
@@ -104,10 +109,10 @@ body{
         border-radius: 6px;
     }
     &__menu-link{
-        color: #7E7E82;
+        font-family: 'TTLakes-Medium' ;
         font-weight: 500;
         font-size: 16px;
         line-height: 24px;
-        
+        color: #7E7E82;
     }
 }
