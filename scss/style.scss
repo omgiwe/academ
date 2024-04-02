@@ -29,6 +29,11 @@ body{
     }
     
 }
+@media (min-width: 1120px){
+    .container{
+        padding: 0 32px;
+    }
+}
 
 .header{
     background-color: #fff;
@@ -41,6 +46,12 @@ body{
     }
 }
 
+@media (min-width: 1120px){
+    .header{
+        display: none;
+    }
+}
+
 .menu-left{
     display: flex;
     align-items: center;
@@ -48,25 +59,29 @@ body{
     &__btn-burger{
         @extend %btn-style
     }
-    // &__logo{
-    //      position: relative;
-    // }
-    // &__logo::after{
-    //     content: "";
-    //     background: #EAEAEA;
-    //     width: 2px;
-    //     height: 32px;
-    //     position: absolute;
-    //     right: -16px;
-    //     top: 12px;
-    // }
+}
 
+@media (min-width: 768px){
+    .menu-left{
+        gap: 42px;
+        &__logo{
+            position: relative;
+        }
+        &__logo::before{
+            content: "";
+            background: #EAEAEA;
+            width: 2px;
+            height: 32px;
+            position: absolute;
+            right: 117px;
+            top: 12px;
+        }
     }
+}
 
 .menu-rigth{
-
     &__contacts{
-
+        display: none;
     }
     &__application{
         display: flex;
@@ -74,6 +89,9 @@ body{
         gap: 16px;
         }
     &__btn{
+        @extend %btn-style
+    }
+    &__contacts-btn{
         @extend %btn-style
     }
     &__btn:first-child{
@@ -91,7 +109,15 @@ body{
 }
 
 @media (min-width: 768px){
-
+    .menu-rigth{
+        display: flex;
+        &__contacts{
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-right: 42px;
+        }
+    }
 }
 
 
@@ -114,6 +140,9 @@ body{
         height: 40px;
         position: absolute;
         left: -14px;
+    }
+    &__menu-btn{
+        @extend %btn-style
     }
     &__menu-wrapper{
         overflow: hidden;
@@ -148,13 +177,33 @@ body{
     }
 }
 
+@media (min-width: 768px){
+    .services{
+        padding: 24px 0 32px;
+        &__title{
+            margin: 0 0 32px;
+        }
+    }
+}
+
+@media (min-width: 1120px){
+    .services{
+        &__head-wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__menu{
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+    }
+}
+
 .about {
     padding-bottom: 35px;
 
-    &__info{
-
-
-    }
     &__text{
         padding-bottom: 16px;
     }
@@ -163,7 +212,7 @@ body{
         margin-bottom: 16px;
         overflow: hidden;
         p {
-            margin: 0 0 23px;
+            margin: 0 0 16px;
         }
     }
     &__btn-more{
@@ -181,6 +230,25 @@ body{
         line-height: 24px;
     }
     &__img{
-        width: 288px;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px){
+    .about{
+        &__info{
+            display: flex;
+            align-items: center;
+        }
+        &__text-wrapper{
+            min-width: 312px;
+            max-height: 159px;
+            line-height: 20px;
+        }
+        &__img{
+            width: 360px;
+            height: 208px;
+            margin-left: 48px;
+        }
     }
 }

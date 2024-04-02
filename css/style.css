@@ -16,7 +16,7 @@
   font-style: normal;
   src: url("../fonts/TTLakes-Bold.woff2") format("woff2"), url("../fonts/TTLakes-Bold.woff") format("woff");
 }
-.menu-rigth__btn, .menu-left__btn-burger {
+.services__menu-btn, .menu-rigth__contacts-btn, .menu-rigth__btn, .menu-left__btn-burger {
   border: none;
   background-color: #FF3E79;
   width: 40px;
@@ -55,6 +55,11 @@ body {
     padding: 0 24px;
   }
 }
+@media (min-width: 1120px) {
+  .container {
+    padding: 0 32px;
+  }
+}
 .header {
   background-color: #fff;
 }
@@ -65,10 +70,35 @@ body {
   align-items: center;
 }
 
+@media (min-width: 1120px) {
+  .header {
+    display: none;
+  }
+}
 .menu-left {
   display: flex;
   align-items: center;
   gap: 16px;
+}
+@media (min-width: 768px) {
+  .menu-left {
+    gap: 42px;
+  }
+  .menu-left__logo {
+    position: relative;
+  }
+  .menu-left__logo::before {
+    content: "";
+    background: #EAEAEA;
+    width: 2px;
+    height: 32px;
+    position: absolute;
+    right: 117px;
+    top: 12px;
+  }
+}
+.menu-rigth__contacts {
+  display: none;
 }
 .menu-rigth__application {
   display: flex;
@@ -88,6 +118,17 @@ body {
   top: 5px;
 }
 
+@media (min-width: 768px) {
+  .menu-rigth {
+    display: flex;
+  }
+  .menu-rigth__contacts {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-right: 42px;
+  }
+}
 .services {
   padding: 24px 0;
 }
@@ -141,6 +182,26 @@ body {
   color: #7E7E82;
 }
 
+@media (min-width: 768px) {
+  .services {
+    padding: 24px 0 32px;
+  }
+  .services__title {
+    margin: 0 0 32px;
+  }
+}
+@media (min-width: 1120px) {
+  .services__head-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .services__menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+}
 .about {
   padding-bottom: 35px;
 }
@@ -153,7 +214,7 @@ body {
   overflow: hidden;
 }
 .about__text-wrapper p {
-  margin: 0 0 23px;
+  margin: 0 0 16px;
 }
 .about__btn-more {
   border: none;
@@ -170,5 +231,22 @@ body {
   line-height: 24px;
 }
 .about__img {
-  width: 288px;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .about__info {
+    display: flex;
+    align-items: center;
+  }
+  .about__text-wrapper {
+    min-width: 312px;
+    max-height: 159px;
+    line-height: 20px;
+  }
+  .about__img {
+    width: 360px;
+    height: 208px;
+    margin-left: 48px;
+  }
 }/*# sourceMappingURL=style.css.map */
